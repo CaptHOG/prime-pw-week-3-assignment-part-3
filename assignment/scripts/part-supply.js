@@ -51,7 +51,7 @@ for (let x=0; x<supplyChanges.length; x++) {
         supplyChanges[x] > 0 ? `Added ${supplyChanges[x]} parts.`
         : supplyChanges[x] < 0 ? `Removed ${supplyChanges[x]} parts.`
         : 'No change.'
-        )
+    )
 }
 */
 
@@ -70,6 +70,18 @@ for (parts of supplyChanges) {
     }
 }
 
+/*
+// #7 with different syntax
+
+for (parts of supplyChanges) {
+    console.log(
+        parts > 0 ? `Added ${parts} parts.`
+        : parts < 0 ? `Removed ${parts} parts.`
+        : 'No change.'
+    )
+}
+*/
+
 // 8. Write a loop to determine the total number of parts available by
 //    adding up all the numbers in the 'supplyChanges' array.
 console.log('8. Total supplies available is:');
@@ -85,3 +97,10 @@ for (let x=0; x<supplyChanges.length; x++) {
 //    no more boxes can be filled.
 //    Then log how many boxes were filled, and how many parts are left over.
 console.log('9. Filling boxes with a "while" loop');
+totalParts = 572;
+let boxMax = 7;
+let boxArray = [];
+while (totalParts > boxMax) {
+    boxArray.push(totalParts -= boxMax)
+    console.log(boxArray.length)
+}
