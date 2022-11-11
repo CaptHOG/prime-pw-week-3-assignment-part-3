@@ -43,13 +43,12 @@ for (let x=0; x<supplyChanges.length; x++) {
     }
 }
 
-/* 
-// #6 with different syntax
-
+// #6 with different syntax and removed parts will show as a positive
+/*
 for (let x=0; x<supplyChanges.length; x++) {
     console.log(
         supplyChanges[x] > 0 ? `Added ${supplyChanges[x]} parts.`
-        : supplyChanges[x] < 0 ? `Removed ${supplyChanges[x]} parts.`
+        : supplyChanges[x] < 0 ? `Removed ${supplyChanges[x] * -1} parts.`
         : 'No change.'
     )
 }
@@ -70,13 +69,13 @@ for (parts of supplyChanges) {
     }
 }
 
-/*
-// #7 with different syntax
 
+// #7 with different syntax and removed parts will show as a positive
+/*
 for (parts of supplyChanges) {
     console.log(
         parts > 0 ? `Added ${parts} parts.`
-        : parts < 0 ? `Removed ${parts} parts.`
+        : parts < 0 ? `Removed ${parts * -1} parts.`
         : 'No change.'
     )
 }
